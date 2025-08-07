@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Anniversary hé hé</title>
+    <style>
+        body {
+            background-color: #ffccf2;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 50px 0;
+            font-size: 30px;
+        }
+        
+        .container {
+            max-width: 100%;
+            padding: 20px;
+            position: relative;
+            box-sizing: border-box;
+        }
+        
+        h1 {
+            color: #e953d5;
+            margin-bottom: 30px;
+        }
+        
+        .button-container {
+            bottom: 50%;
+            transform: translateY(50%);
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 40px;
+            position: relative;
+        }
+        
+        .button {
+            padding: 20px 40px;
+            border: none;
+            border-radius: 30px 0 0 30px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            min-width: 150px;
+        }
+        
+        .button-1 {
+            background-color: #ff69b4;
+            color: white;
+            border-radius: 0 30px 30px 0;
+            position: absolute;
+            left: 0;
+        }
+        
+        .button-2 {
+            background-color: #ff1493;
+            color: white;
+            border-radius: 30px 0 0 30px;
+            position: absolute;
+            right: 0;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .button:active {
+            transform: translateY(1px);
+        }
+
+        #feedback-section {
+            display: none;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Chúc mừng kỉ niệm 1 tháng hí hí</h1>
+        <p>After 1 tháng thì bạn thấy tôi những hành động của tôi khiến bạn khó chịu hay những điều bạn cần tôi sửa không   (❤´艸｀❤)</p>
+        
+        <div id="button-wrapper" class="button-container">
+            <button class="button button-1" onclick="showFeedback()">Có</button>
+            <button class="button button-2" onclick="handleNo()">Khồng</button>
+        </div>
+
+        <div id="feedback-section">
+            <p>Hãy điền feedback của bạn về Vanh vào đây:</p>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdgvEUWGOZnPOymB8EG64zgM-l2--M3wZDPFmMc402487kdZQ/viewform?embedded=true"
+                    width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">
+                Đang tải…
+            </iframe>
+        </div>
+    </div>
+
+    <script>
+        function showFeedback() {
+            document.getElementById("feedback-section").style.display = "block";
+            document.getElementById("button-wrapper").style.display = "none";
+        }
+
+        function handleNo() {
+            alert("Làm gì có chuyện tôi hoàn hảo đến mức đấy, chắc chắn có sai sót, bạn hãy nói ra để tôi sửa và trở thành một người xứng đáng với bạn.");
+            showFeedback();
+        }
+    </script>
+</body>
+</html>
